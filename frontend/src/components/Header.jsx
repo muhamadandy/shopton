@@ -37,11 +37,8 @@ const HeaderComp = () => {
         <div className="flex md:order-2">
           <Navbar.Toggle />
         </div>
-        <Navbar.Collapse className=" order-3 pr-6">
-          <Link
-            to="/cart"
-            className="flex items-center hover:translate-x-2 mb-4 md:mb-0"
-          >
+        <Navbar.Collapse className=" order-3 pr-6 ">
+          <Link to="/cart" className="flex hover:translate-x-2 mb-4 md:mb-0">
             <FaShoppingCart size={20} /> <span className="mx-1">Cart</span>
             {cartItems.length > 0 && (
               <Badge className="bg-red-500 text-white rounded-full">

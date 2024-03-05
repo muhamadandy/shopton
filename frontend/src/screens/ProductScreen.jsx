@@ -101,7 +101,7 @@ const ProductScreen = () => {
                       id="qty"
                       value={qty}
                       onChange={(e) => setQty(Number(e.target.value))}
-                      className="px-2 py-1 border rounded-md"
+                      className="border rounded-md"
                     >
                       {[...Array(product.countInStock).keys()].map((x) => (
                         <option key={x + 1} value={x + 1}>
