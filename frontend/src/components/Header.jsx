@@ -5,6 +5,7 @@ import { Badge } from "flowbite-react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLogoutMutation } from "../slices/userApiSlice";
 import { logout } from "../slices/authSlice";
+import { resetCart } from "../slices/cartSlice";
 
 const HeaderComp = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -19,6 +20,7 @@ const HeaderComp = () => {
     try {
       await logoutApiCall().unwrap();
       dispatch(logout());
+      dispatch(resetCart());
       navigate("/login");
     } catch (err) {
       console.log(err);

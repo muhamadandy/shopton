@@ -61,7 +61,7 @@ const ProductListScreen = () => {
       ) : error ? (
         <Message>
           {" "}
-          <div className="bg-red-500 p-4 rounded">{error}</div>
+          <div className="bg-red-500 p-4 rounded">{error.data.message}</div>
         </Message>
       ) : (
         <div className="overflow-x-auto">
